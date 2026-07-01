@@ -17,11 +17,6 @@ exports.HomePage = class HomePage{
         this.registerLink=page.getByText('Register');
 
 
-
-
-
-
-
        
     }
     async goto(){
