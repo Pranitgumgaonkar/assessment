@@ -25,7 +25,8 @@ exports.HomePage = class HomePage{
        
     }
     async goto(){
-        await this.page.goto('https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC')
+        await this.page.goto(process.env.URL);
+        //await this.page.goto('https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC')
 }
 
 async clickRegisterLink(){

@@ -8,8 +8,12 @@ test('Page Object Model for assessment Incubyte',async({page})=>{
 
 
  const homepage = new HomePage(page);
- await homepage.goto();
  
+ //Navigate to the home page URL
+ await homepage.goto();
+
+ //Click on the Register link
+ await homepage.clickRegisterLink();
 
 
 
