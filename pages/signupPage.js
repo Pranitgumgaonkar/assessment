@@ -26,12 +26,19 @@ exports.SignUpPage = class SignUpPage{
 
         this.zipCodeInput=page.locator('input[name="customer.address.zipCode"]'); //locator for the Zip Code input field    
 
+        this.phoneInput=page.locator('input[name="customer.phoneNumber"]'); //locator for the Phone input field
 
+        this.ssnInput=page.locator('input[name="customer.ssn"]'); //locator for the SSN input field
 
+        this.usernameInput=page.locator('input[name="customer.username"]'); //locator for the Username input field
 
+        this.passwordInput=page.locator('input[name="customer.password"]'); //locator for the Password input field
 
+        this.confirmPasswordInput=page.locator('input[name="repeatedPassword"]'); //locator for the Confirm Password input field
 
+        this.registerButton=page.locator('input[value="Register"]'); //locator for the Register button
 
+        this.logoutLink=page.locator('text=Log Out'); //locator for the Log Out link
 
 
 
@@ -67,6 +74,39 @@ async clickStateInput(){
 async clickZipCodeInput(){
     await this.zipCodeInput.click();
     await this.zipCodeInput.fill(process.env.ZipCode);
+}
+
+async clickPhoneInput(){
+    await this.phoneInput.click();
+    await this.phoneInput.fill(process.env.Phone);
+}
+
+async clickSsnInput(){
+    await this.ssnInput.click();
+    await this.ssnInput.fill(process.env.SSN);  
+}
+
+async clickUsernameInput(){
+    await this.usernameInput.click();
+    await this.usernameInput.fill(process.env.Username1);
+}
+
+async clickPasswordInput(){
+    await this.passwordInput.click();
+    await this.passwordInput.fill(process.env.Password);
+}
+
+async clickConfirmPasswordInput(){
+    await this.confirmPasswordInput.click();
+    await this.confirmPasswordInput.fill(process.env.ConfirmPassword);  
+}
+
+async clickRegisterButton(){
+    await this.registerButton.click();
+}
+
+async clickLogoutLink(){
+    await this.logoutLink.click();
 }
 
 
